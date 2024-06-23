@@ -6,11 +6,6 @@ body{
     height: 100vh;
 }
 
-.left{
-    display: flex;
-    height: 100vh;
-    width: 60%;
-}
 
 .right{
     display: flex;
@@ -21,23 +16,87 @@ body{
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    
 }
 
 
-input{
+/* input{
     width: 100%;
     padding: 12px 20px;
     margin: auto;
     box-sizing: border-box;
     border-radius: 4px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+.input-field{
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
 }
 
-.n2{
-    margin: 8px 10px;
-} 
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
 
-/* flowers */
+.input-field i{
+    margin-left: 15px;
+    color: #999;
+}
+
+/* .form-box{
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 60px 70px;
+    text-align: center;
+} */
+
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #618fe4;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-field{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn-field button{
+    flex-basis: 48%;
+    background: #40bbab;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    
+}
+
+
+/* left */
 .left,
 .left::after,
 .left::before {
@@ -48,16 +107,74 @@ input{
 
 .left{
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     min-height: 100vh;
     background-color: #d4f6f2;
     overflow: hidden;
     perspective: 1000px;
 }
 
+/* pot */
+
+.container{
+    position: relative;
+    /* top: 140px; */
+    top: -10px;
+    margin: 0;
+    z-index: -10;
+}
+
+.pot{
+    position: relative;
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+}
+
+.top{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+    border-radius: 50%;
+}
+
+.circle{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: calc(100% - 19px);
+    height: 40px;
+    background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.dirt{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#c57e65, #e28462);
+    border-radius: 50%;
+}
+
+
+/* flowers */
+
 .flowers{
     position: relative;
+    /* margin-top: -3000px; */
+    top: 40px;
     transform: scale(0.7);
 }
 
@@ -640,12 +757,7 @@ input{
     }
 }
 
-.flower__g-front__line {
-    width: 0.3vmin;
-    height: 20vmin;
-    background-image: linear-gradient(to top, transparent, #079097, transparent 100%);
-    position: relative;
-}
+
 
 .flower__g-front__leaf-wrapper {
     position: absolute;

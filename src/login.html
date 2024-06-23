@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="todo.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1ae6a24d7d.js" crossorigin="anonymous"></script>
         <title>Login</title>
     </head>
     <body>
@@ -142,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="grow-ans" style="--d:2.8s">
+                <!-- <div class="grow-ans" style="--d:2.8s">
                     <div class="flower__g-front">
                       <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
                         <div class="flower__g-front__leaf"></div>
@@ -167,10 +168,9 @@
                       </div>
                       <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
                         <div class="flower__g-front__leaf"></div>
-                      </div>
-                      <div class="flower__g-front__line"></div>
+                      </div> 
                     </div>
-                </div>
+                </div> -->
                 <div class="grow-ans" style="--d:3.2s">
                     <div class="flower__g-fr">
                       <div class="leaf"></div>
@@ -185,28 +185,47 @@
                     </div>
                   </div>
             </div>
+            <div class="container">
+              <div class="pot">
+                <div class="top">
+                  <div class="circle">
+                    <div class="dirt"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
              <script src="myScript.js"></script>
+            
         </div>
 
         <div class="right">
-            <form name="login" method="post">
-                <div class="n2">
-                    <input type="text" class="form-control"
-                        aria-label="Username" placeholder="Username" min="4"
-                        max="10">
+          <div class="form-box">
+            <h1>Sign Up</h1>
+            <form>
+              <div class="input-group">
+                <div class="input-field">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" placeholder="Username">
+                </div>   
+              
+                <div class="input-field">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" placeholder="Email">
                 </div>
-                <div class="n2">
-                    <input type="password" class="form-control"
-                        aria-label="Password" placeholder="Password" min="8"
-                        max="15">
+              
+                <div class="input-field">
+                  <i class="fa-solid fa-lock"></i>
+                  <input type="password" placeholder="Password">
                 </div>
-                <div class="n2">
-                    <button type="submit" class="btn-login">Login</button>
-                </div>
-                <div>
-                <a href="/src/main/resources/templates/signin.html">Don't have an account?</a>
-                </div>
+                <!-- <p>Lost password <a href="#"> Click Here!</a></p> -->
+              </div> 
+              <div class="btn-field">
+                <button type="button">Sign Up</button>
+                <button type="button">Sign in</button>
+              </div>
             </form>
+          </div> 
         </div>
     </body>
 </html>
